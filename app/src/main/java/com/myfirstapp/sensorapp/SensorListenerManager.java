@@ -5,6 +5,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SensorListenerManager {
 
@@ -18,8 +19,6 @@ public class SensorListenerManager {
             TextView gyroscopeTextView,
             TextView magneticFieldTextView
     ) {
-        // Implement the logic to register sensor listeners (similar to your original registerSensorListeners method)
-        // You can call the helper method below to register individual listeners
         registerSensorListener(
                 context,
                 sensorManager,
@@ -50,6 +49,7 @@ public class SensorListenerManager {
             sensorManager.registerListener(listener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
         } else {
             // Handle the case where the sensor is not available
+            Toast.makeText(context, "Sorry, your device does not have the required sensor.", Toast.LENGTH_SHORT).show();
         }
     }
 }

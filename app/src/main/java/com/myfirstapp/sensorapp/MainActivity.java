@@ -46,6 +46,4 @@ public class MainActivity extends AppCompatActivity {
                 textViewMagneticField
         );
     }
-
-    // Other methods remain the same
 }

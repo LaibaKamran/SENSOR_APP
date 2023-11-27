@@ -35,7 +35,6 @@ public class SensorEventListenerAdapter implements SensorEventListener {
     private void displaySensorData(float x, float y, float z) {
         String sensorData = sensorName + "\nX: " + x + "\nY: " + y + "\nZ: " + z;
         // Display data in the corresponding TextView
-        // (Note: You may want to update the UI on the main thread using runOnUiThread or other methods)
         textView.setText(sensorData);
     }
 
